@@ -5,11 +5,12 @@ import vector1 from "../Images/Vector-1.svg"
 import vector2 from "../Images/Vector-2.svg"
 import Rectangle5 from "../Images/Rectangle-5.svg"
 import rightArrow from "../Images/rightArrow.svg"
+import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <>
         <Navbar/>
-        {/* ----------- */}
+        {/* ------first card----- */}
         <div className='body-parent-1'>
           <div className='body-child-1-1'>
             <div>WELCOME TO CREATIVE PROXIES</div>
@@ -17,7 +18,7 @@ const Home = () => {
           </div>
           <div className='body-child-1-2'>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus augue sit amet mollis molestie.</div>
-            <div ><a href="/dashboard" style={{textDecoration:"none"}}><button className='body-child-1-2-btn'>Get Started <span  className='body-child-1-2-btn-icon' ><img src={rightArrow} alt="" /></span></button></a></div>
+            <div ><Link to={"/dashboard"}  style={{textDecoration:"none"}}><button className='body-child-1-2-btn'>Get Started <span  className='body-child-1-2-btn-icon' ><img src={rightArrow} alt="" /></span></button></Link></div>
             <div></div>
             <div>
               <div className='star-div-container'>

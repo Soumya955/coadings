@@ -1,4 +1,5 @@
 import React from 'react'
+import downArrow from "./Images/downArrow.svg"
 
 const Navbar = () => {
   return (
@@ -10,8 +11,8 @@ const Navbar = () => {
             </div>
             <div id="navMid">
                 <p>Pricing</p>
-                <p>Explore Tools v</p>
-                <p>Resources v</p>
+                <p>Explore Tools <img src={downArrow} alt="" /></p>
+                <p>Resources  <img src={downArrow} alt="" /></p>
                 <p>FAQs</p>
                 <p>Blogs</p>
             </div>
