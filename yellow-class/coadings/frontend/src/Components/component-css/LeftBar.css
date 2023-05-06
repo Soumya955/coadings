@@ -1,0 +1,18 @@
+.left-bar-container{
+    width: 27.333vw;
+    min-height:700px;
+    background-color: rgb(252, 250, 247);
+    text-align: center;
+
+}
+.left-bar-container>div{
+    width: 26.333vw;
+    height:40px;
+    background-color: antiquewhite;
+    border: 5px solid rgb(252, 250, 247);
+
+    
+}
+.left-bar-container>div:hover{
+    background-color: rgb(206, 204, 201);;
+}
