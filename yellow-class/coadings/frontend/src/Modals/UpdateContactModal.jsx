@@ -9,20 +9,21 @@ export default function UpdateContactModal({getcontacts,sendsingleitem,modalIsOp
 
 
   
-   const [name,setName]=useState(sendsingleitem.name);
-   const [phone,setPhone]=useState(sendsingleitem.phone);
-  
+   const [name,setName]=useState("");
+   const [phone,setPhone]=useState("");
+  console.log(sendsingleitem)
+
    useEffect(()=>{
     setName(sendsingleitem.name)
     setPhone(sendsingleitem.phone)
-    },[])
+    },[sendsingleitem])
 
    const handleClick=()=>{
    
-    if(name&&phone){
+    if(name&&phone&&""+phone.length==10){
     let mname=""+name[0].toLocaleUpperCase()+name.slice(1,name.length).toLocaleLowerCase()
 
-    axios.patch(`http://localhost:8080/api/contacts/${sendsingleitem._id}`, {
+    axios.patch(`https://maroon-jackrabbit-suit.cyclic.app/api/contacts/${sendsingleitem._id}`, {
         name: mname,
         phone
           })

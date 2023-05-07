@@ -22,7 +22,7 @@ export default function SignUp() {
           password: userpassword,
         };
         return axios
-          .post("http://localhost:8080/api/signup", payload)
+          .post("https://maroon-jackrabbit-suit.cyclic.app/api/signup", payload)
           .then((res) => {
             setisAuthLoading(true);
             setTimeout(()=>{

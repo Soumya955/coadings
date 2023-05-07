@@ -13,10 +13,10 @@ export default function CreateContact({modalIsOpen,getcontacts, setModalIsOpen,h
    const [phone,setPhone]=useState("")
 
    const handleClick=()=>{
-    if(name&&phone){
+    if(name&&phone&&""+phone.length==10){
       let user=accessData("user")
       let mname=""+name[0].toLocaleUpperCase()+name.slice(1,name.length).toLocaleLowerCase()
-      axios.post('http://localhost:8080/api/contacts', {name:mname,phone,userid:user._id})
+      axios.post('https://maroon-jackrabbit-suit.cyclic.app/api/contacts', {name:mname,phone,favorite:false,userid:user._id})
       .then(response => {
         getcontacts()
         setName("")
@@ -35,7 +35,7 @@ export default function CreateContact({modalIsOpen,getcontacts, setModalIsOpen,h
     }else{
       Swal.fire({
         title: 'warning!',
-        text: 'You have not written Sprint Name or It already exists.',
+        text: 'Give right contact.',
         icon: 'warning',
         confirmButtonText: 'OK',
       });

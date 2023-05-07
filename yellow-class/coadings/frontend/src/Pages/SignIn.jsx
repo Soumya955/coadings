@@ -21,7 +21,7 @@ export default function SignIn() {
           password: userpassword,
         };
         return axios
-          .post("http://localhost:8080/api/login", payload)
+          .post("https://maroon-jackrabbit-suit.cyclic.app/api/login", payload)
             .then((res) => {
                 console.log(res)
                 if(res.data.token){

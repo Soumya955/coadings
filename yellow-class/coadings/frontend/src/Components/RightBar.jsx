@@ -5,21 +5,27 @@ import { accessData } from '../Utils/appLocalStorage';
 import axios from 'axios';
 import ContactBox from './ContactBox';
 
-export default function RightBar() {
+export default function RightBar({show,setShow}) {
    
     let user=accessData("user")
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [contacts,setcontacts]=useState([]);
+    
 
     useEffect(()=>{
         getcontacts()
-    },[])
+    },[show])
 
     function getcontacts(){
-       axios.get(`http://localhost:8080/api/contacts/${user._id}`)
+       axios.get(`https://maroon-jackrabbit-suit.cyclic.app/api/contacts/${user._id}`)
        .then(response => {
          console.log(response.data)
-        setcontacts(response.data)
+         if(show=="all"){
+          setcontacts(response.data)
+         }else{
+          let dt=response.data.filter((el)=>el.favorite);
+          setcontacts(dt)
+         }
       })
       .catch(error => {
         console.log(error);

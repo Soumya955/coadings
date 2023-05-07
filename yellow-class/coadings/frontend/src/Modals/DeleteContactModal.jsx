@@ -11,7 +11,7 @@ export default function DeleteContactModal({modalIsOpen,sendsingleitem, setModal
 
    const handleClick=()=>{
     
-      axios.delete(`http://localhost:8080/api/contacts/${sendsingleitem._id}`)
+      axios.delete(`https://maroon-jackrabbit-suit.cyclic.app/api/contacts/${sendsingleitem._id}`)
       .then(response => {
         Swal.fire({
             title: 'Deleted!',
