@@ -4,12 +4,14 @@ import CreateContact from '../Modals/CreateContact';
 import { accessData } from '../Utils/appLocalStorage';
 import axios from 'axios';
 import ContactBox from './ContactBox';
+import ReactLoading from 'react-loading';
 
 export default function RightBar({show,setShow}) {
    
     let user=accessData("user")
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [contacts,setcontacts]=useState([]);
+    const [isloading,setisloading]=useState(false)
     
 
     useEffect(()=>{
@@ -20,6 +22,10 @@ export default function RightBar({show,setShow}) {
        axios.get(`https://maroon-jackrabbit-suit.cyclic.app/api/contacts/${user._id}`)
        .then(response => {
          console.log(response.data)
+         //setisloading(true)
+         setTimeout(()=>{
+          setisloading(false)
+         },1000)
          if(show=="all"){
           setcontacts(response.data)
          }else{
@@ -36,7 +42,12 @@ export default function RightBar({show,setShow}) {
   return (
     <>
     <div className='right-bar-container'>
-       <ContactBox  data={contacts} getcontacts={getcontacts}/>
+
+    {isloading?
+      <div className="loading-container">
+      <ReactLoading type={'bubbles'} color={'green'} height={'10px'} width={'30px'}  />
+      <span style={{fontSize:"1.1rem",fontWeight:"bold",marginTop:"10px"}}>Loading</span>
+      </div>:<ContactBox  data={contacts} getcontacts={getcontacts}/>}
        <div id='add-contact-parent' onClick={()=>setModalIsOpen(true)}>
         + Add New Contact 
        </div>
