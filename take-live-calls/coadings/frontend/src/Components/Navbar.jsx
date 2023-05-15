@@ -15,8 +15,8 @@ export default function Navbar() {
     <nav>
     <ul>
       <li><a href="/allevents">All Events</a></li>
-      <li><a href="myevents">My Events</a></li>
-      <li><a href="createdevents">Created Events</a></li>
+      <li><a href="/myevents">My Events</a></li>
+      <li><a href="/createdevents">Created Events</a></li>
       <li><a href="/signup">Sign Up</a></li>
       <li><a href="/">Sign In</a></li>
       <li><a onClick={handleClick}>LogOut</a></li>

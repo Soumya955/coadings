@@ -6,6 +6,7 @@ import CreatedEvents from './CreatedEvents'
 import AllEvents from './AllEvents'
 import ESignleEvent from '../Components/ESignleEvent'
 import MySingleEvent from '../Components/MySingleEvent'
+import MyEvents from './MyEvents'
 
 export default function AllRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function AllRoutes() {
           <Route path="/allevents/:id" element={<ESignleEvent/>}/>
           <Route path="/createdevents" element={<CreatedEvents/>}/>
           <Route path="/mysingleevent/:id" element={<MySingleEvent/>}/>
+          <Route path="/myevents" element={<MyEvents/>}/>
         </Routes>
     </>
   )

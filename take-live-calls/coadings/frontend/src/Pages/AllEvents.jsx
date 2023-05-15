@@ -44,6 +44,7 @@ export default function AllEvents() {
     <input type="text" value={search} onChange={(e)=>setsearch(e.target.value)} placeholder="Search ..." />
     <button type="submit" onClick={()=>handleSearch()}>Search</button>
   </div>
+  <h1>All Events</h1>
     <div className='AllEvents-container'>
       { events.map((el)=><Link key={el._id} to={`/allevents/${el._id}`}><div id="event" >
             <h3>{el.name}</h3>
