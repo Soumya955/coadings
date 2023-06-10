@@ -1,0 +1,54 @@
+.train-coach {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .seat {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    background-color: #bfbfbf;
+    border-radius: 5px;
+  }
+  
+  .seat::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    width: 5px;
+    height: 30px;
+    background-color: #666666;
+    border-radius: 50%;
+  }
+  
+  .last-row .seat {
+    width: 70px;
+  }
+  
+  .last-row .seat::after {
+    top: 10px;
+    right: -7.5px;
+  }
+  
+  .seat:hover {
+    background-color: #999999;
+    cursor: pointer;
+  }
+  input{
+    height: 50px;
+    margin: 0 5px;
+    background-color: #f8eeee;
+    border-radius: 5px;
+  }
+  
