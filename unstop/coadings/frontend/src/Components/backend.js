@@ -42,6 +42,7 @@ export const sendData=(N)=>{
         }
     }
   }
+
   const checkInBlock=(n)=>{
     let arr1=[]
     for(let i=0;i<array.length;i++){
@@ -71,7 +72,7 @@ export const sendData=(N)=>{
         smallindex=i;
        }
     }
-    console.log(arr1[smallindex][0]-1,arr1[smallindex][1]-1)
+    console.log(arr1,arr1[smallindex][0]-1,arr1[smallindex][1]-1)
   for(let i=smallindex;i<smallindex+n;i++){
     array[arr1[i][0]-1][arr1[i][1]-1]=true
   }
