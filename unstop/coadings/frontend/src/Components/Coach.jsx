@@ -19,7 +19,9 @@ export default function Coach() {
     
 return (
 <>
+
 <div className="train-coach">
+<h3>Train Coach</h3>
     <div className="row">
       <div style={{backgroundColor:seatArray[0][0]?"red":""}} className="seat"></div>
       <div style={{backgroundColor:seatArray[0][1]?"red":""}} className="seat"></div>
@@ -112,10 +114,10 @@ return (
     </div><div className="row">
       <div style={{backgroundColor:seatArray[11][0]?"red":""}} className="seat"></div>
       <div style={{backgroundColor:seatArray[11][1]?"red":""}} className="seat"></div>
-      <div style={{backgroundColor:seatArray[11][3]?"red":""}} className="seat"></div>
+      <div style={{backgroundColor:seatArray[11][2]?"red":""}} className="seat"></div>
     </div>
     <div className="row">
-      <input value={seats}  onChange={(e)=>setseats(e.target.value)} type="number" />
+      <input value={seats}  onChange={(e)=>setseats(e.target.value)} type="number" placeholder='Enter No of Seats' />
       <button disabled={+seats==0||+seats>7} onClick={handleClick}>Enter No of seats</button>
     </div>
 </div>

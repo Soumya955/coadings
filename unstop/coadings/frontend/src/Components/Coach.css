@@ -1,23 +1,29 @@
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .train-coach {
-    width: 900px;
+    width: 50vw;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f2f2f2;
+    background-color: rgb(229, 219, 219);
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(44, 43, 43, 0.2);
+  }
+  h3{
+    font-size: 2rem;
   }
   
   .row {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 0.8vw;
   }
   
   .seat {
-    width: 50px;
-    height: 50px;
+    width: 4vw;
+    height: 8vh;
     margin: 0 5px;
-    background-color: #bfbfbf;
+    background-color: #4e6ba9;
     border-radius: 5px;
   }
   
