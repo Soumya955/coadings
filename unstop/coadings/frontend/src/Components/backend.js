@@ -83,6 +83,7 @@ export const sendData=(N)=>{
   }
 
 return array;
+
 }
 export const getData=()=>{
     return array;
