@@ -1,0 +1,21 @@
+
+#form{
+  width: 300px;
+  margin: auto;
+}
+label {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+  }
+  input{
+    
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+  
