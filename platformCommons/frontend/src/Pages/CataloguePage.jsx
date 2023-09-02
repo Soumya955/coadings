@@ -12,7 +12,7 @@ export default function CataloguePage({data,getdata}) {
        <img onClick={()=>{navigate("/basketpage")}} className='cart-img' src={cartImg} alt="" />
     </div>
     <div className='CataloguePage-body'>
-    {data?.map(item=><SingleProduct data={item} getdata={getdata}/>)}
+    {data?.map(item=><SingleProduct  key={`${item.id}catalog`} data={item} getdata={getdata}/>)}
     </div>
   </div>
   )

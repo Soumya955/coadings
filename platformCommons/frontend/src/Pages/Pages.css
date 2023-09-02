@@ -21,5 +21,8 @@
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
     width: 95%;
-    /* margin: 50px auto; */
+    height: 90vh ;
+}
+.total{
+    margin-top: 100px;
 }

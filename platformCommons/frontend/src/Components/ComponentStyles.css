@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    background-color: rgb(255,126,51);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #ea4848;
+}
+
+.icon {
+    font-size: 48px;
+    color: #ccc;
+}
+
+.SingleProduct-button {
+    background: linear-gradient(135deg, rgb(239, 99, 6), yellow,rgba(206, 4, 4, 0.902));
+    border: none;
+    color: rgb(74, 3, 3);
+    padding: 0.65rem 1.25rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.SingleProduct-button:hover {
+    background: linear-gradient(135deg,rgba(206, 4, 4, 0.902),rgb(239, 99, 6), yellow);
+}
+.SingleproductForcart-button-remove {
+    background: linear-gradient(135deg, rgb(239, 99, 6), rgba(206, 4, 4, 0.902),rgb(239, 99, 6));
+    border: none;
+    color: rgb(74, 3, 3);
+    padding: 0.65rem 1.25rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.SingleproductForcart-button-remove:hover {
+    background: linear-gradient(135deg,rgba(206, 4, 4, 0.902),rgb(239, 99, 6),rgba(206, 4, 4, 0.902));
+}
+span{
+    color: rgb(255, 123, 0);
+    margin: 1.15rem;
+    font-size: 1.3rem;
+
+}
+.name{
+    color: rgb(113, 48, 48);
+}
+.price{
+    color: green;
+}

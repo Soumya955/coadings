@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react'
+import "./ComponentStyles.css"
 
 export default function SingleProduct({data,getdata}) {
 
@@ -20,14 +21,14 @@ export default function SingleProduct({data,getdata}) {
       });
     }
   return (
-   <div key={data.id}>
+   <div className='card'>
     <img  height={"250px"} width={"250px"}src={data.image} alt="" />
-    <h3>{data.name}</h3>
-    <h3>${data.price}</h3>
+    <h3 className='name'>{data.name}</h3>
+    <h3 className='price'>${data.price}</h3>
     {data.quantity?
-    <div><button onClick={()=>handleCart(data,data.quantity-1)}>-</button><span>{data.quantity}</span><button onClick={()=>handleCart(data,data.quantity+1)}>+</button></div>
+    <div><button className='SingleProduct-button' onClick={()=>handleCart(data,data.quantity-1)}>-</button><span>{data.quantity}</span><button className='SingleProduct-button' onClick={()=>handleCart(data,data.quantity+1)}>+</button></div>
     :
-    <button onClick={()=>handleCart(data,1)}>Add to Cart</button>}
+    <button className='SingleProduct-button' onClick={()=>handleCart(data,1)}>Add to Cart</button>}
    </div>
   )
 }
