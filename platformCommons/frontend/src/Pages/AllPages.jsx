@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import CataloguePage from './CataloguePage'
 import BasketPage from './BasketPage'
 import axios from 'axios'
+import CheckoutPage from './CheckoutPage'
+import Successpage from './Successpage'
 
 export default function AllPages() {
     const [data,setdata]=useState([])
@@ -28,6 +30,8 @@ export default function AllPages() {
         <Routes>
             <Route path="/" element={<CataloguePage data={data} getdata={getdata}/>} />
             <Route path="/basketpage" element={<BasketPage data={data} getdata={getdata}/>} />
+            <Route path="/checkout" element={<CheckoutPage data={data} getdata={getdata}/>} />
+            <Route path="/successpage" element={<Successpage />} />
         </Routes>
     </>
   )

@@ -22,7 +22,7 @@ export default function SingleproductForcart({data,getdata,checkCartEmpty}) {
     }
   return (
     <>
-        <div key={data.id}>
+        <div  key={data.id}>
         <img  height={"250px"} width={"250px"}src={data.image} alt="" />
         <h3 className='name'>{data.name}</h3>
         <h3 className='price'>${data.price}</h3>
