@@ -21,7 +21,7 @@ export default function HomePage() {
       })
       saveData("newsData",data1)
       console.log(data1,'data1')
-    //   setdata([...data1])
+      setdata([...data1])
     };
     useEffect(()=>{getdata()},[])
 
@@ -39,7 +39,7 @@ export default function HomePage() {
         <div className={gridview?"gridview":"normalview"}>
      {data?.map(item=><div key={item.title} >
         <Link style={{textDecoration:"none"}} to={item.url}><h3 className='title'>{item.title}</h3></Link>
-        <span onClick={toggleFavorite(item.title)}>
+        <span onClick={()=>toggleFavorite(item.title)}>
         {item.isFavorite ? (
           <FontAwesomeIcon icon={faHeart} style={{ color: 'red' }} />
         ) : (
@@ -47,7 +47,7 @@ export default function HomePage() {
         )}
       </span>
         <h5 className='author'>Author :{item.author}</h5>
-        <img className='image' src={item.urlToImage} alt="" />
+        <Link style={{textDecoration:"none"}} to={item.url}><img className='image' src={item.urlToImage} alt="" /></Link>
      </div>)}
     </div>
     </>

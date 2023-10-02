@@ -1,10 +1,11 @@
 import axios from "axios";
-import { saveData } from "./Utils/appLocalStorage";
+import { accessData, saveData } from "./Utils/appLocalStorage";
 
 export const getdata=()=>{
    return axios.get('https://grumpy-pumps-fish.cyclic.cloud/api')
   .then((res) => {
-    let data=res.data.map(item=>{return{...item,isFavorite:false}})
+    let data2=accessData("newsData");
+    let data=res.data.map((item,index)=>{return{...item,isFavorite:data2[index].isFavorite?true:false}})
     saveData("newsData",data)
     return data;
   })

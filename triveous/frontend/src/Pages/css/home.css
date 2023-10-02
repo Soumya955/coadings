@@ -9,6 +9,62 @@
     gap: 200px 30px;
     grid-template-columns: repeat(3,1fr);
 }
+@media only screen and (max-width: 520px) and (min-width: 0px){
+    .normalview{
+        margin: 100px auto;
+        width: 70%;
+      }
+      .gridview{
+          margin: 100px auto;
+          width: 70%;
+          display: grid;
+          gap: 200px 30px;
+          grid-template-columns: repeat(1,1fr);
+      }
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 18px;
+    
+        margin-top: 50px;
+        right: 100px;
+      }
+      .toggle{
+        font-size: 24px;
+        position: relative;
+        right: 100px;
+    }
+}
+@media only screen and (max-width: 820px) and (min-width: 520px){
+    .normalview{
+        margin: 100px auto;
+        width: 70%;
+      }
+      .gridview{
+          margin: 100px auto;
+          width: 70%;
+          display: grid;
+          gap: 200px 30px;
+          grid-template-columns: repeat(2,1fr);
+      }
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 18px;
+    
+        margin-top: 50px;
+        right: 100px;
+      }
+      .toggle{
+        font-size: 24px;
+        position: relative;
+        right: 100px;
+    }
+}
+
+
 .title{
     color: rgb(79, 65, 65);
     text-decoration: none;
@@ -21,16 +77,14 @@
     height: 80%; 
 }
 
-.toggle{
-    font-size: 24px;
-}
+
 
 /* Styling for the toggle button */
 .switch {
     position: relative;
     display: inline-block;
-    width: 40px;
-    height: 18px;
+    width: 30px;
+    height: 14px;
 
     margin-top: 50px;
     margin-right: -50%;
@@ -49,14 +103,15 @@
     bottom: 0;
     background-color: #ccc;
     transition: 0.4s;
+    border: 1px solid black;
     border-radius: 34px;
   }
   
   .slider:before {
     position: absolute;
     content: "";
-    height: 12px;
-    width: 16px;
+    height: 6px;
+    width: 10px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -69,7 +124,7 @@
   }
   
   input:checked + .slider:before {
-    transform: translateX(18px);
+    transform: translateX(8px);
   }
   
   /* Round slider for a circle-shaped button */
