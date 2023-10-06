@@ -1,0 +1,100 @@
+.productsContainer .productMenu {
+  height: calc(100% - 20px);
+  width: 210px;
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.productMenu .productItem {
+  color: #737d94;
+  font-size: 16px;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.productMenu .selectedItem {
+  border-radius: 10px;
+  background: #5da9e9;
+  color: #ffffff;
+}
+
+.productsContainer .productMenu::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+.productsContainer .productMenu::-webkit-scrollbar-thumb {
+  background-color: #5da9e9;
+  border-radius: 6px;
+}
+
+.productsContainer .productMenu::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.phoneProductItem {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .phoneProductItem {
+    display: block;
+    width: 48px;
+    min-width: 48px;
+  }
+
+  .productItem {
+    display: none;
+  }
+
+  .productsContainer .productMenu {
+    height: 72px;
+    width: calc(100% - 40px);
+    padding: 0 20px 20px;
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll;
+    flex-direction: row;
+  }
+
+  .phoneProductItem .productItemIcon {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #ededed;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  }
+
+  .phoneProductItem .productItemTitle {
+    color: #b6bac3;
+    text-align: center;
+    font-size: 12px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-top: 8px;
+  }
+
+  .selectedPhoneItem .productItemTitle {
+    color: #5da9e9;
+  }
+
+  .selectedPhoneItem .productItemIcon {
+    background: #5da9e9;
+  }
+
+  .productsContainer .productMenu::-webkit-scrollbar {
+    display: none;
+  }
+}
