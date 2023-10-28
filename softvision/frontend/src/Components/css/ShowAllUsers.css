@@ -1,0 +1,23 @@
+.user-details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .user-details h2 {
+    font-size: 24px;
+  }
+  
+  .user-details p {
+    margin: 8px 0;
+  }
+  .user-card{
+    width: 40%;
+    padding: 1rem;
+    border-radius: 20%;
+    height: max-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: auto;
+  }
