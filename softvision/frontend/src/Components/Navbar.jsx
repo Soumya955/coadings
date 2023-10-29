@@ -7,10 +7,10 @@ export default function Navbar(){
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/"  className="navbar-link">Create a User</Link>
+          <Link to="/createuser"  className="navbar-link">Create a User</Link>
         </li>
         <li className="navbar-item">
-          <Link to="/users"  className="navbar-link">Users</Link>
+          <Link to="/"  className="navbar-link">Users</Link>
         </li>
         <li className="navbar-item">
           <Link to="/update"  className="navbar-link">Update user</Link>
