@@ -1,0 +1,38 @@
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+
+.color-select {
+    align-items: center;
+    margin:auto;
+}
+
+.color-select label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+.color-select select {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: white;
+    color: #333;
+}
+
+.color-select select option {
+    background-color: transparent;
+    color: #333;
+}
+
+.color-select select:focus {
+    border: 2px solid #007bff;
+    outline: none;
+}

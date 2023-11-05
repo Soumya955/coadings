@@ -1,0 +1,34 @@
+
+  .car-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .car-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .car-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .car-card p {
+    margin: 5px 0;
+  }
+  
+  .car-card h4 {
+    font-size: 16px;
+    margin: 15px 0 5px;
+  }
+  
+  
+  

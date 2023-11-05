@@ -1,0 +1,74 @@
+.Modal-delete{
+    position: absolute;
+    height: 7rem;
+    overflow-y: hidden; 
+    overflow-x: hidden; 
+    width: 30%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    padding: 1.25rem;
+    overflow-y: hidden;
+    border-radius:1.7rem;
+    box-shadow: 0rem 0rem .625rem rgba(0, 0, 0, 0.5);
+  }
+  .Modal2::-webkit-scrollbar {
+	display: none; 
+  }
+  
+  @media (min-width: 0px) and (max-width: 520px) {
+	.Modal-delete{
+        top: 40%;
+		width: 50%;
+        height: 7rem;
+    }
+	
+  
+  }  
+  @media (min-width: 520px) and (max-width: 1024px) {
+	.Modal-delete{
+		top: 45%;
+		width: 28%;
+        height: 7rem;
+    }
+	
+  } 
+  
+  input{
+    width:95%;
+    border: none;
+    border-bottom: 2px solid black;
+    display: block;
+  }
+  
+  .add{
+    float: right;
+    background-color: transparent;
+    border: none;
+    color: blue;
+  }
+  .cancel{
+    float: right;
+    background-color: transparent;
+    border: none;
+    color: rgb(240, 95, 17);
+  }
+ 
+  
+.user-details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .user-details h2 {
+    font-size: 24px;
+  }
+  
+  .user-details p {
+    margin: 8px 0;
+  }
+  
