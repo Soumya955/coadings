@@ -36,3 +36,42 @@ select {
     border: 2px solid #007bff;
     outline: none;
 }
+
+/* Pagination container */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+  }
+  
+  /* Pagination buttons */
+  .pagination button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+  }
+  
+  /* Disabled pagination button */
+  .pagination button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Current page indicator */
+  .pagination span {
+    font-size: 1.5rem;
+    margin: 0 1.5rem;
+    color: #333;
+  }
+  
+  /* Pagination buttons on hover */
+  .pagination button:hover {
+    background-color: #0056b3;
+  }
+  
+

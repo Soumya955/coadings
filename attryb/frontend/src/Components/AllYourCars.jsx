@@ -8,16 +8,17 @@ import { Spinner } from '@chakra-ui/react'
 export default function AllYourCars() {
   const [carData, setcarData] = useState([]);
   const [isLoading, setisLoading] = useState(false);
+  const [page, setpage] = useState(1);
 
   useEffect(() => {
-    getData();
-  }, []);
+    getData(page);
+  }, [page]);
 
-  const getData = () => {
+  const getData = (page) => {
     setisLoading(true);
     const user = accessData("user");
     axios
-      .get(`https://mock-server-1.onrender.com/api/car/${user._id}`)
+      .get(`https://mock-server-1.onrender.com/api/car/${user._id}?page=${page}`)
       .then((res) => {
         console.log(res, "AllYourCars");
         setisLoading(false);
@@ -58,6 +59,16 @@ export default function AllYourCars() {
             <p>Phone: {car.owner.phone}</p>
           </div>
         ))}
+      </div>
+      <div className="pagination">
+        <button
+          disabled={page == 1}
+          onClick={() => setpage((page) => page - 1)}
+        >
+          Prev
+        </button>
+        <span>{page}</span>
+        <button disabled={carData.length<3} onClick={() => setpage((page) => page + 1)}>Next</button>
       </div>
     </>
   );

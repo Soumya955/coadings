@@ -12,15 +12,16 @@ export default function EditYourCars() {
     const [modaldata,setmodaldata]=useState({})
     const [carData,setcarData]=useState([])
     const [isLoading, setisLoading] = useState(false);
+    const [page, setpage] = useState(1);
 
-  useEffect(()=>{
-    getData()
-  },[])
+    useEffect(() => {
+      getData(page);
+    }, [page]);
   
   const getData=()=>{
     const user=accessData('user')
     setisLoading(true)
-    axios.get(`https://mock-server-1.onrender.com/api/car/${user._id}`)
+    axios.get(`https://mock-server-1.onrender.com/api/car/${user._id}?page=${page}`)
     .then(res=>{
       setcarData(res.data)
       setisLoading(false)
@@ -62,6 +63,16 @@ export default function EditYourCars() {
           </div>
         ))}
         <UpdateModal modaldata={modaldata} getData={getData} modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
+      </div>
+      <div className="pagination">
+        <button
+          disabled={page == 1}
+          onClick={() => setpage((page) => page - 1)}
+        >
+          Prev
+        </button>
+        <span>{page}</span>
+        <button disabled={carData.length<3} onClick={() => setpage((page) => page + 1)}>Next</button>
       </div>
   </>
   )

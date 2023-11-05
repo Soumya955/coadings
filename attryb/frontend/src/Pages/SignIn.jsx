@@ -9,8 +9,8 @@ import { saveData } from '../utils/appLocalStorage';
 
 
 export default function SignIn() {
-    const [useremail, setEmail] = useState("");
-    const [userpassword, setPassword] = useState("");
+    const [useremail, setEmail] = useState('S.badajena@example.com');
+    const [userpassword, setPassword] = useState("soumya123");
   
     const navigate = useNavigate();
     const handleClick = () => {
