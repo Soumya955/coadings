@@ -1,0 +1,16 @@
+.add-task {
+    display: flex;
+    position: fixed;
+    gap: 1rem;
+    width: 65%;
+    height: 8vh;
+    align-items: center;
+    padding: 0 1rem;
+    top: 15vh;
+    margin-left: 14vw;
+    background-color: rgb(192, 236, 221);
+    font-size: 2rem;
+    color: blue;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }

@@ -1,0 +1,54 @@
+.Modal-delete {
+  position: absolute;
+  height: 7rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 30%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.25rem;
+  overflow-y: hidden;
+  border-radius: 1.7rem;
+  box-shadow: 0rem 0rem 0.625rem rgba(0, 0, 0, 0.5);
+}
+.Modal2::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 520px) {
+  .Modal-delete {
+    top: 40%;
+    width: 50%;
+    height: 7rem;
+  }
+}
+@media (min-width: 520px) and (max-width: 1024px) {
+  .Modal-delete {
+    top: 45%;
+    width: 28%;
+    height: 7rem;
+  }
+}
+
+.delete {
+  float: right;
+  background-color: transparent;
+  border: none;
+  margin: 1rem;
+  color: rgb(227, 32, 32);
+}
+.delete:hover {
+  background-color: red;
+  margin-top: 0.2rem;
+  border-radius: 20%;
+  padding: 1rem;
+  color: black
+}
+.cancel {
+  float: right;
+  background-color: transparent;
+  border: none;
+  color: rgb(240, 95, 17);
+}

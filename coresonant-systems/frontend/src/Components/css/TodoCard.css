@@ -1,0 +1,48 @@
+/* App.css */
+
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 1.4rem;
+  }
+  
+ 
+  .todo-card {
+    background-color: #f5f5f5;
+    border-radius: 0.6rem;
+    padding: 0.7rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(183, 216, 248, 0.4) -5px 5px, rgba(244, 188, 223, 0.3) -10px 10px, rgba(240, 161, 211, 0.2) -15px 15px, rgba(239, 193, 222, 0.1) -20px 20px, rgba(238, 160, 209, 0.05) -25px 25px;
+  }
+  
+  .todo-card.completed {
+    background-color: rgb(128, 192, 33)
+  }
+  
+  .task-title {
+    cursor: pointer;
+  }
+  .button-group{
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .button-group button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .button-group button:hover {
+    background-color: #2980b9;
+  }
+  

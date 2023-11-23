@@ -1,0 +1,58 @@
+.Modal{
+    position: absolute;
+    height: 10rem;
+    overflow-y: scroll; 
+    width: 20%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    padding: 1.25rem;
+    overflow-y: hidden;
+    border-radius:1.7rem;
+    box-shadow: 0rem 0rem .625rem rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  @media (min-width: 0px) and (max-width: 520px) {
+	.Modal{
+		    width: 70%;
+        height: 10rem;
+    }
+	
+  
+  }  
+  @media (min-width: 520px) and (max-width: 1024px) {
+	.Modal{
+		width: 37%;
+    height: 10rem;
+    }
+	
+  } 
+  
+  input{
+    width:95%;
+    margin-top: 2rem;
+    border:none;
+    border-bottom: 2px solid black;
+    display: block;
+  }
+  input:focus {
+    outline: none; 
+  }
+  
+  .add{
+    float: right;
+    background-color: transparent;
+    border: none;
+    color: blue;
+    margin-top: 1rem;
+  }
+  .cancel{
+    float: right;
+    background-color: transparent;
+    border: none;
+    color: rgb(240, 95, 17);
+    margin-top: 1rem;
+  }
+ 

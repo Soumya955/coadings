@@ -1,0 +1,19 @@
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 25vh auto;
+  }
+  
+
+.filter-completed{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 25vh;
+    margin-left: 36vw;
+}
+.filter-completed>input{
+    display: inline;
+    
+    float: right;
+}
