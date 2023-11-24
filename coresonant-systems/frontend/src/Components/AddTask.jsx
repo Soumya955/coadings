@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import AddTaskModal from "../Modals/AddTaskModal";
 import "./css/AddTask.css"
 
-export default function AddTask({ todos, setTodos }) {
+export default function AddTask() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  
   return (
     <>
       <div
@@ -17,8 +18,6 @@ export default function AddTask({ todos, setTodos }) {
       </div>
       <AddTaskModal
         modalIsOpen={modalIsOpen}
-        todos={todos}
-        setTodos={setTodos}
         setModalIsOpen={setModalIsOpen}
       />
     </>

@@ -1,7 +1,7 @@
 import { legacy_createStore, combineReducers, applyMiddleware } from "redux";
-import { Reducer as UserReducer } from "./TaskReducer/Reducer";
+import { Reducer as TaskReducer } from "./TaskReducer/Reducer";
 
-const RootReducers = combineReducers({ UserReducer });
+const RootReducers = combineReducers({ TaskReducer });
 
 const store = legacy_createStore(RootReducers);
 

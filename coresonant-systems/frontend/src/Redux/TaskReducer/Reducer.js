@@ -8,6 +8,7 @@ let initialState = {
 
 const Reducer = (oldState = initialState, action) => {
   const { type, payload } = action;
+  console.log(oldState,type,payload,'redux')
   switch (action.type) {
     case types.TASK_GET_REQUEST:
       return {

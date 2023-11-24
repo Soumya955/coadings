@@ -2,13 +2,22 @@ import React, { useContext, useState } from "react";
 import Modal from "react-modal";
 import "./Css-for-Modals/AddTaskModal.css";
 import { alertTaskAddedSuccess } from "../Utils/alerts";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { taskADDEDSuccess } from "../Redux/TaskReducer/Action";
 
 export default function AddTaskModal({
-  todos,
   modalIsOpen,
   setModalIsOpen,
-  setTodos,
 }) {
+
+  const dispatch = useDispatch();
+  const { todos, isLoading, isError } = useSelector((state) => {
+    return {
+      todos: state.TaskReducer.data,
+      isLoading: state.TaskReducer.isLoading,
+      isError: state.TaskReducer.isError,
+    };
+  }, shallowEqual);
   const [newTask, setNewTask] = useState("");
 
   const addTask = () => {
@@ -18,7 +27,7 @@ export default function AddTaskModal({
         title: newTask,
         completed: false,
       };
-      setTodos([newTodo,...todos]);
+      dispatch(taskADDEDSuccess([newTodo,...todos]))
       setNewTask("");
       alertTaskAddedSuccess()
     }

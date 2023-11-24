@@ -5,53 +5,74 @@ import TodoCard from "../Components/TodoCard";
 import AddTask from "../Components/AddTask";
 import { Switch } from "@chakra-ui/react";
 import { alertdeleteSuccess, alertupdateSuccess } from "../Utils/alerts";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import {
+  taskDELETESuccess,
+  taskGETFailure,
+  taskGETRequest,
+  taskGETSuccess,
+  taskUPDATESuccess,
+} from "../Redux/TaskReducer/Action";
 
 export default function Todo() {
-  const [todos, setTodos] = useState([]);
   const [showCompleted, setShowCompleted] = useState(false);
+
+  const dispatch = useDispatch();
+  const { todos, isLoading, isError } = useSelector((state) => {
+    return {
+      todos: state.TaskReducer.data,
+      isLoading: state.TaskReducer.isLoading,
+      isError: state.TaskReducer.isError,
+    };
+  }, shallowEqual);
 
   useEffect(() => {
     getdata();
   }, []);
 
   const getdata = () => {
+    dispatch(taskGETRequest());
     fetch("https://jsonplaceholder.typicode.com/users/1/todos")
       .then((res) => res.json())
-      .then((data) => setTodos(data))
-      .catch((error) => console.error("Error fetching todos:", error));
+      .then((res) => {
+        dispatch(taskGETSuccess(res));
+      })
+      .catch((error) => {
+        dispatch(taskGETFailure());
+        console.error("Error fetching todos:", error);
+      });
   };
 
   const toggleCompletion = (id) => {
     const updatedTodos = todos.map((todo) =>
       todo.id === id ? { ...todo, completed: !todo.completed } : todo
     );
-    setTodos(updatedTodos);
+    dispatch(taskGETSuccess(updatedTodos));
   };
 
   const editTask = (id, newTitle) => {
     const updatedTodos = todos.map((todo) =>
       todo.id === id ? { ...todo, title: newTitle } : todo
     );
-    setTodos(updatedTodos);
-    alertupdateSuccess()
+    dispatch(taskUPDATESuccess(updatedTodos));
+    alertupdateSuccess();
   };
 
   const deleteTask = (id) => {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(updatedTodos);
+    dispatch(taskDELETESuccess(updatedTodos));
     alertdeleteSuccess();
   };
 
   const filteredTodos = showCompleted
     ? todos.filter((todo) => todo.completed)
     : todos;
-  console.log(todos);
 
   return (
     <div>
       <Navbar />
       <h1>Todo List</h1>
-      <AddTask todos={todos} setTodos={setTodos} />
+      <AddTask />
       <div className="filter-completed">
         <label>Show Completed Tasks:</label>
         <Switch
@@ -61,7 +82,7 @@ export default function Todo() {
         />
       </div>
       <ul className="todo-list">
-        {filteredTodos.map((todo) => (
+        {filteredTodos?.map((todo) => (
           <li key={todo.id}>
             <TodoCard
               todo={todo}
