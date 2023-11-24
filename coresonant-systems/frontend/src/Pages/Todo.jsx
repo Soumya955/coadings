@@ -3,7 +3,7 @@ import "./css/Todo.css";
 import Navbar from "../Components/Navbar";
 import TodoCard from "../Components/TodoCard";
 import AddTask from "../Components/AddTask";
-import { Switch } from "@chakra-ui/react";
+import { Spinner } from '@chakra-ui/react'
 import { alertdeleteSuccess, alertupdateSuccess } from "../Utils/alerts";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import {
@@ -13,6 +13,7 @@ import {
   taskGETSuccess,
   taskUPDATESuccess,
 } from "../Redux/TaskReducer/Action";
+import FilteredCard from "../Components/FilteredCard";
 
 export default function Todo() {
   const [showCompleted, setShowCompleted] = useState(false);
@@ -73,14 +74,18 @@ export default function Todo() {
       <Navbar />
       <h1>Todo List</h1>
       <AddTask />
-      <div className="filter-completed">
-        <label>Show Completed Tasks:</label>
-        <Switch
-          checked={showCompleted}
-          onChange={() => setShowCompleted(!showCompleted)}
-          size="lg"
-        />
-      </div>
+      <FilteredCard
+        showCompleted={showCompleted}
+        setShowCompleted={setShowCompleted}
+      />
+      {isLoading&& <div className="loading-spinner"><Spinner
+        thickness="5px"
+        speed="0.65s"
+        emptyColor="gray.200"
+        color="blue.500"
+        size="md"
+      />...Loading</div>}
+     
       <ul className="todo-list">
         {filteredTodos?.map((todo) => (
           <li key={todo.id}>
@@ -89,6 +94,7 @@ export default function Todo() {
               toggleCompletion={toggleCompletion}
               editTask={editTask}
               deleteTask={deleteTask}
+              isLoading={isLoading}
             />
           </li>
         ))}

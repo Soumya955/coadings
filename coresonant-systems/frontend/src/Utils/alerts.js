@@ -20,6 +20,7 @@ export const alertdeleteSuccess = () => {
     icon: 'success',
     title: 'Deletion Successful!',
     text: 'You have successfully Deleted Task.',
+    timer: 1000, 
   });
 };
 
@@ -28,5 +29,6 @@ export const alertupdateSuccess = () => {
     icon: 'success',
     title: 'Updation Successful!',
     text: 'You have successfully updated Task.',
+    timer: 1000, 
   });
 };

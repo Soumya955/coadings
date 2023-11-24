@@ -68,3 +68,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+```js
+Question--
+
+
+Todo Application with API Integration
+Build a Todo application using React js that allows users to add, edit, and delete tasks. The
+application should have the following functionalities:
+● Display a list of existing tasks, showing the task name and its status (completed or not).
+Initialize this list with the todos fetched from an API.
+● Use the following API endpoint to retrieve the todos:
+https://jsonplaceholder.typicode.com/users/1/todos.
+● Each todo object from the API response will have the following properties:
+● id (number): The unique identifier for the todo.
+● title (string): The title of the todo.
+● completed (boolean): Indicates whether the todo has been completed or not.
+● Use this initial data to populate the list of tasks in your application.
+● Provide an input field to add new tasks. When a task is added, it should appear in the list.
+Perform the following validations before adding a task:
+● The task name should not be empty.
+● Allow users to mark a task as completed by clicking on it. Completed tasks should be
+visually distinguishable (ex: By any different color).
+● Allow users to edit the task name by clicking on an edit button/icon next to each task. When
+a task is edited, update the task name in the list.
+● Provide a delete button/icon to allow users to remove a task from the list.
+● Implement a filter or tab functionality to toggle between displaying all tasks and completed
+tasks.
+Please create the necessary components and implement the logic to achieve the above
+functionalities. You can use any additional libraries or CSS frameworks if needed. Remember to
+fetch the initial todos from the API endpoint mentioned above and use them to populate the list of
+tasks in your application. Let me know if you have any further question
+
+```
