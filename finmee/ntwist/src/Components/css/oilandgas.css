@@ -1,0 +1,49 @@
+.oil-and-gas{
+  width: 95%;
+  gap:3vw;
+}
+.slide-up {
+  position: relative;
+  animation: slide-up 3.5s ease;
+  z-index: -1;
+}
+
+@keyframes slide-up {
+  from {
+    top: 45vh;
+  }
+  to {
+    top: 0; 
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.oil-and-gas div:last-child h1 {
+  margin-bottom: 1rem;
+  color: #fa4336;
+  line-height: 50px;
+  letter-spacing: 2px;
+}
+.oil-and-gas div:last-child p {
+  line-height: 28px;
+  margin-bottom: 1rem;
+}
+
+
+@media only screen and (max-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 780px) {
+}
+@media only screen and (max-width: 480px) {
+}

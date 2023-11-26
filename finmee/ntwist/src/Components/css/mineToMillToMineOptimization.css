@@ -1,0 +1,85 @@
+.Mine-To-Mill-To-Mine-Optimization {
+  display: grid;
+  width: 95%;
+  gap: 3vw;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "first last";
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.slide-up {
+  position: relative;
+  animation: slide-up 3.5s ease;
+}
+
+@keyframes slide-up {
+  from {
+    top: 45vh;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.Mine-To-Mill-To-Mine-Optimization div:first-child {
+  grid-area: first;
+}
+.Mine-To-Mill-To-Mine-Optimization div:last-child {
+  grid-area: last;
+}
+
+.Mine-To-Mill-To-Mine-Optimization div:first-child h1 {
+  margin-bottom: 1rem;
+  color: #fa4336;
+  line-height: 50px;
+  letter-spacing: 1px;
+}
+.Mine-To-Mill-To-Mine-Optimization div:first-child p {
+  line-height: 30px;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.Mine-To-Mill-To-Mine-Optimization div:first-child button {
+  margin-bottom: 3rem;
+}
+
+.machineImg {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1020px) {
+  .Mine-To-Mill-To-Mine-Optimization {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "first"
+      "last";
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 780px) {
+  .Mine-To-Mill-To-Mine-Optimization {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "last"
+      "first";
+  }
+}
+@media only screen and (max-width: 480px) {
+  .Mine-To-Mill-To-Mine-Optimization {
+    display: grid;
+    grid-template-areas:
+      "last"
+      "first";
+  }
+}

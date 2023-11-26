@@ -1,0 +1,125 @@
+.home-container {
+  width: 100%;
+  background-image: url("../../Images/asset34.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home-main-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.home-container-left h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.home-container-left h1 + h1 {
+  margin-bottom: 1.4rem;
+}
+
+.home-container-right img {
+  width: 100%;
+}
+
+
+.btm-to-top {
+  position: fixed;
+  bottom: 1rem;
+  background-color: lightseagreen;
+  padding: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  background-color: #003358;
+  z-index: 1000;
+  border-radius: 50%;
+  color: gray;
+  transition: 2s all ease-in;
+}
+
+.hide {
+  display: none;
+}
+
+
+.flag-lang {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  z-index: 1000;
+  color: black;
+  background-color: white;
+  padding: 0.3rem 0.6rem;
+  column-gap: 0.7rem;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.flag-lang img {
+  height: 24px;
+}
+
+.flag-lang h2 {
+  color: black;
+  font-size: 24px;
+}
+
+/* Media queries and responsiveness */
+@media only screen and (max-width: 1080px) {
+  .home-main-container {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .home-main-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .home-container-left h1 {
+    font-size: 35px;
+  }
+
+  .home-container-right img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home-main-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    padding: 1rem;
+  }
+
+  .home-main-container div:first-child {
+    align-items: flex-end;
+  }
+  .home-main-container div:last-child {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .home-container-left h1 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,75 @@
+.mineral-processing {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "first last";
+  width: 95%;
+  gap:3vw;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+
+.slide-up {
+  position: relative;
+  animation: slide-up 3.5s ease;
+}
+
+@keyframes slide-up {
+  from {
+    top: 45vh;
+  }
+  to {
+    top: 0; 
+  }
+}
+
+
+.mineral-processing div:first-child h1 {
+  margin-bottom: 1rem;
+  color: #fa4336;
+  line-height: 52px;
+  letter-spacing: 2px;
+}
+.mineral-processing div:first-child p {
+  line-height: 26px;
+  margin-bottom: 3rem;
+}
+
+
+.mineral-processing div:first-child {
+  grid-area: first;
+}
+.mineral-processing div:last-child {
+  grid-area: last;
+}
+
+
+
+
+@media only screen and (max-width: 1020px) {
+  .mineral-processing {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "first"
+      "last";
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 780px) {
+  .mineral-processing {
+    grid-template-areas:
+      "last"
+      "first";
+  }
+}

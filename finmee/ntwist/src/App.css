@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* H1 */
+h1 {
+  font-size: 42px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 41px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+a {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: auto;
+  padding: 2.5rem;
+}
+
+.customImg {
+  display: block;
+  width: 100%;
+  filter: brightness(70%);
+}
+
+.primary-btn {
+  background-color: #007aff;
+  color: var(--primary-color);
+  padding: 12px 40px;
+  border-radius: 2px;
+}
+
+.secondary-btn {
+  background-color: #ff3a2d;
+  color: var(--primary-color);
+
+  padding: 12px 24px;
+  border-radius: 2px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 2px;
+  font-size: 15px;
+  font-family: var(--primary-font);
+}
+
+.homepage-btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 100;
+  left: 20px;
+  color: black;
+  padding: 10px 30px;
+}
+
+@media only screen and (max-width: 780px) {
+  .container {
+    margin: auto;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .primary-btn {
+    padding: 10px 30px;
+  }
+  .secondary-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
