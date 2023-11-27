@@ -1,0 +1,44 @@
+.feature-card {
+    border: 0px solid white;
+    width: 70%;
+   margin: 10rem auto;
+   margin-left: 15rem;
+  }
+  
+  .feature-card h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    color: white;
+    text-align: left;
+  }
+  
+  .feature-card h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+    color: white;
+    text-align: left;
+  }
+
+  .mid-img{
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+  .mid-img img{
+    width: 50%;
+  }
+  
+  .green-text {
+    color: #7ee787;
+  }
+  
+  .blue-text {
+    color: #918bff;
+  }
+
+  .pink-text {
+    color: #ff8be4;
+  }
+  

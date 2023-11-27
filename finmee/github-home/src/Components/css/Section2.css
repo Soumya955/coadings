@@ -1,0 +1,27 @@
+.Section2-parent {
+  width: 80%;
+}
+
+.organizations-imges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10rem auto;
+}
+
+.organizations-imges img {
+  max-width: 90%;
+  margin: 0 10px;
+}
+
+.organizations {
+  border: 0px solid rgb(242, 232, 232);
+  margin-left: 90px;
+}
+
+.organizations p {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #94979c;
+  text-align: left;
+}

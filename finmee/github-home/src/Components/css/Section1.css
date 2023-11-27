@@ -1,0 +1,72 @@
+.Section1-parent {
+  width: 80%;
+}
+
+.Section1-parent1 {
+  width: 70%;
+  border: 0px solid white;
+  margin-left: 90px;
+}
+
+
+
+.lets-build {
+  font-size: 70px;
+  color: white;
+  margin-top: 150px;
+  font-weight: 600;
+  line-height: 80px;
+  text-align: left;
+}
+
+.the-world{
+  font-size: 60px;
+  color: white;
+  margin-top: 60px;
+  font-weight: 600;
+  line-height: 80px;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.container-left-div {
+  align-items: center;
+}
+
+
+.container-right-div {
+  text-align: center;
+  padding: 10px;
+  color: antiquewhite;
+  font-weight: 1000;
+  border: 1px solid #7240c8;
+}
+
+input {
+  width: 230px;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #7240c8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.7rem 1.3rem;
+}
+
+
+.white_text {
+  color: white;
+}
+

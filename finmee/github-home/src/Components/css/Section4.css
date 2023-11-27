@@ -1,0 +1,117 @@
+.feature-card {
+  border: 0px solid white;
+  width: 70%;
+ margin: 10rem auto;
+ margin-left: 15rem;
+}
+
+.feature-card h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+  color: white;
+  text-align: left;
+}
+
+.feature-card h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  color: white;
+  text-align: left;
+}
+
+.mid-img{
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.mid-img img{
+  width: 50%;
+}
+
+.green-text {
+  color: #7ee787;
+}
+
+.blue-text {
+  color: #918bff;
+}
+
+.pink-text {
+  color: #ff8be4;
+}
+
+  
+
+  .table-container {
+    margin-left: 90px;
+    height: auto;
+    border: 0px solid #ccc;
+    padding: 10px;
+  }
+  
+  .table-container img {
+    height: auto;
+    display: block;
+  }
+  
+  .over-million-developers1 {
+    border: 0px solid white;
+    max-width: 100%;
+    margin-left: 400px;
+  }
+  
+  .over-million-developers1 h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 52px;
+  }
+  
+  .over-million-developers1 p {
+    text-align: center;
+    color: #456379;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .over-million-developers2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: 20px;
+  }
+  
+  .over-million-developers2 button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  
+  
+  .over-million-developers2 button + button {
+    margin-left: 10px;
+  }
+  
+  .last-image {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+  }
+  
+  .last-image img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
