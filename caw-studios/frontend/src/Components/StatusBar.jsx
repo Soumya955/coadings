@@ -20,16 +20,11 @@ export default function StatusBar() {
   }, shallowEqual);
 
   useEffect(() => {
-    // let total1 = products.reduce(
-    //   (product, acc) => +product.quantity * +product.price + acc,
-    //   0
-    // );
-    let total1=0;
+    let total1 = 0;
 
-    for(let i=0;i<products.length;i++){
-     total1+=((+products[i].quantity )* (+products[i].price) )
+    for (let i = 0; i < products.length; i++) {
+      total1 += +products[i].quantity * +products[i].price;
     }
-    console.log(total1);
     setTotal(total1.toFixed(2));
   }, [products]);
 

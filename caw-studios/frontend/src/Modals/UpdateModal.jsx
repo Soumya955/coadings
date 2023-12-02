@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import Modal from "react-modal";
 import "./Css-for-Modals/UpdateModal.css";
 import { getFixedNumberOfWords } from "../Utils/utils";
-import { IoClose } from 'react-icons/io5';
+import { IoClose } from "react-icons/io5";
 import { shallowEqual, useSelector } from "react-redux";
 
 export default function UpdateModal({
@@ -11,7 +11,6 @@ export default function UpdateModal({
   modalIsOpen,
   setModalIsOpen,
 }) {
-
   const { products, isLoading, isError } = useSelector((state) => {
     return {
       products: state.OrderDataReducer.data,
@@ -30,40 +29,43 @@ export default function UpdateModal({
     "price-is-not-the-same": false,
   });
 
-  const changeChooseReason=(key,value)=>{
+  const changeChooseReason = (key, value) => {
     setchoosereasonButton((prevState) => ({
       ...prevState,
       [key]: value,
     }));
-  }
+  };
 
   useEffect(() => {
-    if(price != product.price)changeChooseReason('price-is-not-the-same',true)
-    if(quantity != product.quantity)changeChooseReason('quantity-is-not-the-same',true)
-    if(!quantity)changeChooseReason('missing-product',true)
-    if(quantity)changeChooseReason('missing-product',false)
+    if (price != product.price)
+      changeChooseReason("price-is-not-the-same", true);
+    if (quantity != product.quantity)
+      changeChooseReason("quantity-is-not-the-same", true);
+    if (!quantity) changeChooseReason("missing-product", true);
+    if (quantity) changeChooseReason("missing-product", false);
     setTotal((price * quantity).toFixed(2));
   }, [price, quantity]);
 
-
   const updateProduct = () => {
     let udata = "";
-     if(choosereasonButton["price-is-not-the-same"]&&choosereasonButton["quantity-is-not-the-same"]){
-      udata="Quantity-and-Price-has-Changed"
-    }else if(choosereasonButton["price-is-not-the-same"]){
-      udata="Price-has-Changed"
-    }else if(choosereasonButton["quantity-is-not-the-same"]){
-      udata="Quantity-has-Changed"
+    if (
+      choosereasonButton["price-is-not-the-same"] &&
+      choosereasonButton["quantity-is-not-the-same"]
+    ) {
+      udata = "Quantity-and-Price-has-Changed";
+    } else if (choosereasonButton["price-is-not-the-same"]) {
+      udata = "Price-has-Changed";
+    } else if (choosereasonButton["quantity-is-not-the-same"]) {
+      udata = "Quantity-has-Changed";
     }
 
-    if(choosereasonButton["missing-product"]){
-      udata="Missing"
+    if (choosereasonButton["missing-product"]) {
+      udata = "Missing";
     }
-   
-   
-    let d1=editProducts(product.id,"status",udata,products)
-    let d2=editProducts(product.id,"quantity",quantity,d1);
-    let d3=editProducts(product.id,"price",price,d2);
+    editProducts(product.id, "status", udata, products)
+      .then((res) => editProducts(product.id, "quantity", quantity, res.data))
+      .then((res) => editProducts(product.id, "price", price, res.data))
+      .catch((err) => console.log(err));
   };
   return (
     <>
@@ -72,7 +74,10 @@ export default function UpdateModal({
         className="Modal-update"
         ariaHideApp={false}
         onRequestClose={() => setModalIsOpen(false)}
-      ><span style={{float:"right"}}><IoClose  onClick={()=> setModalIsOpen(false)}/></span>
+      >
+        <span style={{ float: "right" }}>
+          <IoClose onClick={() => setModalIsOpen(false)} />
+        </span>
         <h3>{`${getFixedNumberOfWords(product.productName, 9)}...`}</h3>
         <h4>American Roland</h4>
         <div className="change-price-quantity-parent">
@@ -113,7 +118,11 @@ export default function UpdateModal({
                 />{" "}
                 <button
                   className="update-round-button"
-                  onClick={() =>quantity?setquantity((quantity) => quantity + 1):setquantity(1)}
+                  onClick={() =>
+                    quantity
+                      ? setquantity((quantity) => quantity + 1)
+                      : setquantity(1)
+                  }
                 >
                   +
                 </button>
@@ -126,12 +135,10 @@ export default function UpdateModal({
           </div>
         </div>
         <h4>Choose Reason</h4>
-        <div style={{marginBottom:"1rem"}}>
+        <div style={{ marginBottom: "1rem" }}>
           <button
             className={`reason-round-button ${
-              choosereasonButton["missing-product"]
-                ? "change-background"
-                : ""
+              choosereasonButton["missing-product"] ? "change-background" : ""
             }`}
           >
             Missing Product
@@ -160,13 +167,16 @@ export default function UpdateModal({
           type="button"
           className="rounded-button2"
           onClick={() => {
-            updateProduct()
+            updateProduct();
             setModalIsOpen(false);
           }}
         >
           Send
         </button>
-        <button className="rounded-button1" onClick={() => setModalIsOpen(false)}>
+        <button
+          className="rounded-button1"
+          onClick={() => setModalIsOpen(false)}
+        >
           Cancel
         </button>
       </Modal>

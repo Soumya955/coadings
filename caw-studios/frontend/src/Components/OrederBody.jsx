@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./css/orederBody.css";
 import data from "../Data/data.json";
-import { IoCheckmarkSharp, IoCloseSharp } from 'react-icons/io5';
+import { IoCheckmarkSharp, IoCloseSharp } from "react-icons/io5";
 import TdEdit from "./TdEdit";
 import TdFalseIcon from "./TdFalseIcon";
 import TdTrueIcon from "./TdTrueIcon";
@@ -10,7 +10,6 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { ORDERDATAUPDATERequest } from "../Redux/OrderDataReducer/Action";
 
 export default function OrederBody() {
-
   const dispatch = useDispatch();
   const { products, isLoading, isError } = useSelector((state) => {
     return {
@@ -19,18 +18,27 @@ export default function OrederBody() {
       isError: state.OrderDataReducer.isError,
     };
   }, shallowEqual);
-  const editProducts=(id,key,data,TotalData=products)=>{
-     let newData=TotalData.map((item,index)=>{
-        return (id==item.id)?{...item,[key]:data}: item;
-     })
-     console.log(newData,"Update")
-     dispatch(ORDERDATAUPDATERequest([...newData]))
-     return newData;
-  }
+
+  const editProducts = (id, key, data, TotalData = products) => {
+    return new Promise((resolve, reject) => {
+      let newData = TotalData.map((item, index) => {
+        return id == item.id ? { ...item, [key]: data } : item;
+      });
+      dispatch(ORDERDATAUPDATERequest([...newData]));
+      const success = newData;
+      if (success) {
+        resolve({ data: success, message: "Operation completed successfully" });
+      } else {
+        reject("Operation failed");
+      }
+    });
+  };
+
+
 
   return (
     <div className="order-body-parent">
-      <BodySearchBar/>
+      <BodySearchBar />
       <table className="product-table">
         <thead>
           <tr>
@@ -49,16 +57,24 @@ export default function OrederBody() {
         <tbody>
           {products.map((product, index) => (
             <tr key={index}>
-              <td><img className="table-img" src={product.imageUrl} alt="" /></td>
+              <td>
+                <img className="table-img" src={product.imageUrl} alt="" />
+              </td>
               <td>{product.productName}</td>
               <td>{product.brand}</td>
               <td>${product.price} /6+1LB</td>
               <td>{product.quantity} /6+1LB</td>
               <td>${(product.price * product.quantity).toFixed(2)}</td>
-              <td >{product.status&&<button  className={`${product.status}`}>{product.status.split("-").join(" ")}</button>}</td>
-              <TdTrueIcon editProducts={editProducts} product={product}/>
-              <TdFalseIcon editProducts={editProducts} product={product}/>
-              <TdEdit editProducts={editProducts} product={product}/>
+              <td>
+                {product.status && (
+                  <button className={`${product.status}`}>
+                    {product.status.split("-").join(" ")}
+                  </button>
+                )}
+              </td>
+              <TdTrueIcon editProducts={editProducts} product={product} />
+              <TdFalseIcon editProducts={editProducts} product={product} />
+              <TdEdit editProducts={editProducts} product={product} />
             </tr>
           ))}
         </tbody>
