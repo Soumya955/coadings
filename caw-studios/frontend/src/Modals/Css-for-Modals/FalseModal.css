@@ -1,0 +1,51 @@
+.Modal-false {
+  position: absolute;
+  height: 9rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 20%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.25rem;
+  overflow-y: hidden;
+  border-radius: 0.1rem;
+  box-shadow: 0rem 0rem 0.625rem rgba(0, 0, 0, 0.5);
+}
+.Modal2::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 520px) {
+  .Modal-false {
+    top: 40%;
+    width: 50%;
+    height: 7rem;
+  }
+}
+@media (min-width: 520px) and (max-width: 1024px) {
+  .Modal-false {
+    top: 45%;
+    width: 28%;
+    height: 7rem;
+  }
+}
+
+.add {
+  float: right;
+  background-color: transparent;
+  border: none;
+  margin-left: 1rem;
+  color: rgb(96, 93, 90);
+  font-weight: 700;
+}
+.cancel {
+  float: right;
+  background-color: transparent;
+  border: none;
+  color: rgb(96, 93, 90);
+  font-weight: 700;
+}
+
+

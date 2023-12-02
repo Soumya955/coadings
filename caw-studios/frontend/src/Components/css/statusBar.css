@@ -1,0 +1,35 @@
+.status-parent{
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    margin: 0rem auto;
+    border: 1px solid rgb(230, 225, 225);
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem;
+
+}
+.status-parent>div{
+    width: 16%;
+    padding: 0 2%;
+    /* border-left: 1px solid grey; */
+    
+}
+.status-parent>div+div{
+    border-left: 1px solid rgb(230, 225, 225);
+    
+}
+.status-parent>div>div:nth-child(1){
+    font-size: 1rem;
+    color: rgb(76, 78, 80);
+    font-weight: 400;
+}
+.status-parent>div>div:nth-child(2){
+    font-size: 1.1rem;
+    color: rgb(43, 45, 48);
+    font-weight: 700;
+}
+.status-parent>div>div:nth-child(3){
+    font-size: 1.1rem;
+    color: rgb(43, 45, 48);
+    font-weight: 700;
+}

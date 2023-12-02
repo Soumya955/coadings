@@ -1,0 +1,95 @@
+.order-body-parent{
+    width: 85%;
+    margin: 1rem auto;
+    border: 1px solid rgb(230, 225, 225);
+    background-color:white ;
+}
+
+/* ProductTable.css */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .product-table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 1rem auto;
+  }
+  
+  .product-table th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .product-table td {
+    border-bottom: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .product-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  .table-img{
+    margin-top: 10px;
+    width: 2rem;
+    border-radius: 45%;
+  }
+
+
+
+
+.product-table th:nth-child(2),
+.product-table td:nth-child(2) {
+  width: 20vw; 
+}
+
+.product-table th:nth-child(3),
+.product-table td:nth-child(3) {
+  width: 7vw;
+}
+.product-table th:nth-child(4),
+.product-table td:nth-child(4) {
+  width: 7vw;
+}
+.product-table th:nth-child(5),
+.product-table td:nth-child(5) {
+  width: 7vw;
+}
+.product-table th:nth-child(6),
+.product-table td:nth-child(6) {
+  width: 10vw;
+}
+.product-table th:nth-child(7),
+.product-table td:nth-child(7) {
+  width: 17vw;
+}
+
+
+.Missing-Urgent{
+  border-radius: 1rem 1rem 1rem 1rem;
+  /* margin-right: 1rem; */
+  padding: 0.4rem 1rem;
+  background-color: red;
+  color:rgb(218, 229, 223);
+  border: none;
+}
+.Approved,.Quantity-and-Price-has-Changed,.Quantity-has-Changed,.Price-has-Changed{
+    border-radius: 1rem 1rem 1rem 1rem;
+    /* margin-right: 1rem; */
+    padding: 0.4rem 1rem;
+    background-color: rgb(61,202,114);
+    color:rgb(218, 229, 223);
+    border: none;
+  }
+  .Missing{
+    border-radius: 1rem 1rem 1rem 1rem;
+    /* margin-right: 1rem; */
+    padding: 0.4rem 1rem;
+    background-color: rgb(243, 88, 88);
+    color:rgb(218, 229, 223);
+    border: none;
+  }

@@ -1,0 +1,113 @@
+.Modal-update {
+  position: absolute;
+  height: fit-content;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 45%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.25rem;
+  overflow-y: hidden;
+  border-radius: 0.7rem;
+  box-shadow: 0rem 0rem 0.625rem rgba(0, 0, 0, 0.5);
+}
+.Modal2::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 0px) and (max-width: 520px) {
+  .Modal {
+    top: 40%;
+    width: 70%;
+    height: 27rem;
+  }
+}
+@media (min-width: 520px) and (max-width: 1024px) {
+  .Modal {
+    top: 45%;
+    width: 37%;
+    height: 25rem;
+  }
+}
+.change-price-quantity-parent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.change-price-quantity-parent>div>img{
+ width: 10rem;
+}
+.change-price-quantity-parent>div:nth-child(2){
+width: 70%;
+}
+.change-price-quantity-parent>div>div{
+  display: flex;
+  gap: 2vw;
+}
+.change-price-quantity-parent>div>div:nth-child(1)>div:nth-child(1){
+  margin-right: 7rem;
+}
+.change-price-quantity-parent>div>div:nth-child(2)>div:nth-child(1){
+  margin-right: 4.7rem;
+}
+.change-price-quantity-parent>div>div:nth-child(3)>div:nth-child(1){
+  margin-right: 9rem;
+}
+
+
+.update-input{
+  display: inline;
+  width: 3rem;
+  
+}
+
+.update-input::-webkit-outer-spin-button,
+.update-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.update-round-button{
+  padding: 5px 12px;
+  border-radius: 13px;
+  border: none;
+  background-color: rgb(68,204,121);
+  color: #fff;
+  font-weight: 500;
+}
+
+.reason-round-button {
+  padding: 5px 12px;
+  border-radius: 15px;
+  margin-left: 10px;
+  border:1px solid #a49e9e;
+  color: #a49e9e;
+  background: transparent;
+}
+.reason-round-button:hover {
+  background:rgb(169, 241, 196);
+}
+
+.change-background{
+  background-color: rgb(68,204,121);
+  color: white;
+}
+
+.add {
+  float: right;
+  background-color: transparent;
+  border: none;
+  color: blue;
+}
+.cancel {
+  float: right;
+  background-color: transparent;
+  border: none;
+  color: rgb(240, 95, 17);
+}
+
+h4 {
+  color: #ccc;
+}

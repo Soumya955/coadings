@@ -1,0 +1,15 @@
+.navbar-address{
+    background-color: white;
+}
+.navbar-address-parent{
+   width: 85%;
+   margin: 0 auto;
+   padding: 1rem;
+   color: rgb(137, 145, 153);
+}
+.navbar-address-parent>span:nth-child(2){
+    margin: 0.5rem;
+}
+.navbar-address-parent>span:nth-child(3){
+    text-decoration: underline;
+}
