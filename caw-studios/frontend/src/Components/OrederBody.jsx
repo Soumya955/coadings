@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./css/orederBody.css";
-import data from "../Data/data.json";
-import { IoCheckmarkSharp, IoCloseSharp } from "react-icons/io5";
 import TdEdit from "./TdEdit";
 import TdFalseIcon from "./TdFalseIcon";
 import TdTrueIcon from "./TdTrueIcon";
 import BodySearchBar from "./BodySearchBar";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { ORDERDATAUPDATERequest } from "../Redux/OrderDataReducer/Action";
+import ImageLogo from "../Images/Avocado Hass.jpg"
 
 export default function OrederBody() {
   const dispatch = useDispatch();
@@ -58,7 +57,7 @@ export default function OrederBody() {
           {products.map((product, index) => (
             <tr key={index}>
               <td>
-                <img className="table-img" src={product.imageUrl} alt="" />
+                <img className="table-img" src={ImageLogo} alt="" />
               </td>
               <td>{product.productName}</td>
               <td>{product.brand}</td>

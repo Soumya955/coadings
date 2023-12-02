@@ -27,4 +27,11 @@ const ORDERDATAUPDATERequest = (payload) =>{
         payload
     }
 }
-export {ORDERDATAGETRequest,ORDERDATAGETSuccess,ORDERDATAGETFailure,ORDERDATAUPDATERequest}
+const ORDERDATAADDSuccess = (payload) =>{
+    return {
+        type: types.ORDERDATA_ADD_SUCCESS,
+        payload
+    }
+}
+
+export {ORDERDATAGETRequest,ORDERDATAGETSuccess,ORDERDATAGETFailure,ORDERDATAUPDATERequest,ORDERDATAADDSuccess}

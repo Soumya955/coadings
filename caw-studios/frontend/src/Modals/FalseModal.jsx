@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import Modal from "react-modal";
 import "./Css-for-Modals/FalseModal.css";
 import { getFixedNumberOfWords } from "../Utils/utils";
-import { IoClose } from 'react-icons/io5';
+import { IoClose } from "react-icons/io5";
 
 export default function FalseModal({
   editProducts,
@@ -18,7 +18,10 @@ export default function FalseModal({
         ariaHideApp={false}
         onRequestClose={() => setModalIsOpen(false)}
       >
-        <h2>Missing product <span style={{float:"right"}}><IoClose  onClick={()=> setModalIsOpen(false)}/></span></h2>
+        <span style={{ float: "right" }}>
+          <IoClose onClick={() => setModalIsOpen(false)} />
+        </span>{" "}
+        <h2>Missing product </h2>
         <p>
           {`is ${getFixedNumberOfWords(product.productName, 4)}... urgent`} ?
         </p>
@@ -27,7 +30,7 @@ export default function FalseModal({
           type="button"
           onClick={() => {
             setModalIsOpen(false);
-            editProducts(product.id,"status","Missing-Urgent")
+            editProducts(product.id, "status", "Missing-Urgent");
           }}
         >
           Yes
@@ -36,7 +39,7 @@ export default function FalseModal({
           className="cancel"
           onClick={() => {
             setModalIsOpen(false);
-            editProducts(product.id,"status","Missing")
+            editProducts(product.id, "status", "Missing");
           }}
         >
           No

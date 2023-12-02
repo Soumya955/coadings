@@ -52,11 +52,11 @@ export default function UpdateModal({
       choosereasonButton["price-is-not-the-same"] &&
       choosereasonButton["quantity-is-not-the-same"]
     ) {
-      udata = "Quantity-and-Price-has-Changed";
+      udata = "quantity-and-price-updated";
     } else if (choosereasonButton["price-is-not-the-same"]) {
-      udata = "Price-has-Changed";
+      udata = "Price-updated";
     } else if (choosereasonButton["quantity-is-not-the-same"]) {
-      udata = "Quantity-has-Changed";
+      udata = "Quantity-updated";
     }
 
     if (choosereasonButton["missing-product"]) {

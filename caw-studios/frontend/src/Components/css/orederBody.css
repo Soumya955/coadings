@@ -42,7 +42,6 @@
   .table-img{
     margin-top: 10px;
     width: 2rem;
-    border-radius: 45%;
   }
 
 
@@ -50,7 +49,7 @@
 
 .product-table th:nth-child(2),
 .product-table td:nth-child(2) {
-  width: 20vw; 
+  width: 23vw; 
 }
 
 .product-table th:nth-child(3),
@@ -102,7 +101,7 @@
   color:rgb(218, 229, 223);
   border: none;
 }
-.Approved,.Quantity-and-Price-has-Changed,.Quantity-has-Changed,.Price-has-Changed{
+.Approved,.quantity-and-price-updated,.Quantity-updated,.Price-updated{
     border-radius: 1rem 1rem 1rem 1rem;
     /* margin-right: 1rem; */
     padding: 0.4rem 1rem;

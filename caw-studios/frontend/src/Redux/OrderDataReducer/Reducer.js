@@ -23,6 +23,13 @@ const Reducer = (oldState = initialState, action) => {
         isError: false,
         data: action.payload,
       };
+    case types.ORDERDATA_ADD_SUCCESS:
+      return {
+        ...oldState,
+        isLoading: false,
+        isError: false,
+        data: action.payload,
+      };
     case types.ORDERDATA_UPDATE_REQUEST:
       return {
         ...oldState,
