@@ -2,15 +2,16 @@
   height: 70vh;
   overflow: auto;
   border: none;
+  margin-right: 2rem;
 }
 
-/* Customize scrollbar styles (optional) */
+
 .order-body::-webkit-scrollbar {
   width: 8px; 
   border-radius: 50%;
 }
 
 .order-body::-webkit-scrollbar-thumb {
-  background-color: #c2c0c0; 
+  background-color: #d0cdcd; 
   border-radius: 20px;
 }

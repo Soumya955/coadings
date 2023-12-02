@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import "./Css-for-Modals/UpdateModal.css";
 import { getFixedNumberOfWords } from "../Utils/utils";
 import { IoClose } from 'react-icons/io5';
+import { shallowEqual, useSelector } from "react-redux";
 
 export default function UpdateModal({
   editProducts,
@@ -10,6 +11,14 @@ export default function UpdateModal({
   modalIsOpen,
   setModalIsOpen,
 }) {
+
+  const { products, isLoading, isError } = useSelector((state) => {
+    return {
+      products: state.OrderDataReducer.data,
+      isLoading: state.OrderDataReducer.isLoading,
+      isError: state.OrderDataReducer.isError,
+    };
+  }, shallowEqual);
   const [price, setprice] = useState(product.price);
   const [quantity, setquantity] = useState(product.quantity);
   const [total, setTotal] = useState(
@@ -50,7 +59,11 @@ export default function UpdateModal({
     if(choosereasonButton["missing-product"]){
       udata="Missing"
     }
-    editProducts(product.id,"status",udata)
+   
+   
+    let d1=editProducts(product.id,"status",udata,products)
+    let d2=editProducts(product.id,"quantity",quantity,d1);
+    let d3=editProducts(product.id,"price",price,d2);
   };
   return (
     <>

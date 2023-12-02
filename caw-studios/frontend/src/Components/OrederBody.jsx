@@ -19,12 +19,13 @@ export default function OrederBody() {
       isError: state.OrderDataReducer.isError,
     };
   }, shallowEqual);
-console.log(products)
-  const editProducts=(id,key,data)=>{
-     let newData=products.map((item,index)=>{
+  const editProducts=(id,key,data,TotalData=products)=>{
+     let newData=TotalData.map((item,index)=>{
         return (id==item.id)?{...item,[key]:data}: item;
      })
+     console.log(newData,"Update")
      dispatch(ORDERDATAUPDATERequest([...newData]))
+     return newData;
   }
 
   return (
