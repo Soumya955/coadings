@@ -3,8 +3,8 @@
   height: fit-content;
   overflow-y: hidden;
   overflow-x: hidden;
-  width: 45%;
-  top: 35%;
+  width: 42%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
@@ -31,37 +31,36 @@
     height: 25rem;
   }
 }
-.change-price-quantity-parent{
+.change-price-quantity-parent {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #777474;
 }
 
-.change-price-quantity-parent>div>img{
- width: 10rem;
+.change-price-quantity-parent > div > img {
+  width: 10rem;
 }
-.change-price-quantity-parent>div:nth-child(2){
-width: 70%;
+.change-price-quantity-parent > div:nth-child(2) {
+  width: 70%;
 }
-.change-price-quantity-parent>div>div{
+.change-price-quantity-parent > div > div {
   display: flex;
   gap: 2vw;
 }
-.change-price-quantity-parent>div>div:nth-child(1)>div:nth-child(1){
-  margin-right: 7rem;
+.change-price-quantity-parent > div > div:nth-child(1) > div:nth-child(1) {
+  margin-right: 7.3rem;
 }
-.change-price-quantity-parent>div>div:nth-child(2)>div:nth-child(1){
+.change-price-quantity-parent > div > div:nth-child(2) > div:nth-child(1) {
   margin-right: 4.7rem;
 }
-.change-price-quantity-parent>div>div:nth-child(3)>div:nth-child(1){
-  margin-right: 9rem;
+.change-price-quantity-parent > div > div:nth-child(3) > div:nth-child(1) {
+  margin-right: 8.5rem;
 }
 
-
-.update-input{
+.update-input {
   display: inline;
   width: 3rem;
-  
 }
 
 .update-input::-webkit-outer-spin-button,
@@ -69,11 +68,11 @@ width: 70%;
   -webkit-appearance: none;
   margin: 0;
 }
-.update-round-button{
+.update-round-button {
   padding: 5px 12px;
   border-radius: 13px;
   border: none;
-  background-color: rgb(68,204,121);
+  background-color: rgb(68, 204, 121);
   color: #fff;
   font-weight: 500;
 }
@@ -82,32 +81,35 @@ width: 70%;
   padding: 5px 12px;
   border-radius: 15px;
   margin-left: 10px;
-  border:1px solid #a49e9e;
+  border: 1px solid #a49e9e;
   color: #a49e9e;
   background: transparent;
 }
 .reason-round-button:hover {
-  background:rgb(169, 241, 196);
+  background: rgb(169, 241, 196);
 }
 
-.change-background{
-  background-color: rgb(68,204,121);
+.change-background {
+  background-color: rgb(68, 204, 121);
   color: white;
 }
-
-.add {
-  float: right;
-  background-color: transparent;
-  border: none;
-  color: blue;
-}
-.cancel {
-  float: right;
-  background-color: transparent;
-  border: none;
-  color: rgb(240, 95, 17);
-}
-
 h4 {
   color: #ccc;
+}
+.rounded-button1 {
+  float: right;
+  border-radius: 1rem 1rem 1rem 1rem;
+  border: 2px solid rgb(30, 99, 63);
+  margin-right: 1rem;
+  padding: 0.4rem 1rem;
+  background-color: rgb(247, 251, 249);
+  color: rgb(30, 99, 63);
+}
+.rounded-button2 {
+  float: right;
+  border-radius: 20px 20px 20px 20px;
+  padding: 10px 20px;
+  background-color: rgb(30, 99, 63);
+  color: rgb(247, 251, 249);
+  border: none;
 }

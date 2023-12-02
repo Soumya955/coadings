@@ -1,0 +1,16 @@
+.order-body {
+  height: 70vh;
+  overflow: auto;
+  border: none;
+}
+
+/* Customize scrollbar styles (optional) */
+.order-body::-webkit-scrollbar {
+  width: 8px; 
+  border-radius: 50%;
+}
+
+.order-body::-webkit-scrollbar-thumb {
+  background-color: #c2c0c0; 
+  border-radius: 20px;
+}

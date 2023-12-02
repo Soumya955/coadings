@@ -113,7 +113,7 @@ export default function UpdateModal({
           </div>
         </div>
         <h4>Choose Reason</h4>
-        <div>
+        <div style={{marginBottom:"1rem"}}>
           <button
             className={`reason-round-button ${
               choosereasonButton["missing-product"]
@@ -145,7 +145,7 @@ export default function UpdateModal({
         </div>
         <button
           type="button"
-          className="add"
+          className="rounded-button2"
           onClick={() => {
             updateProduct()
             setModalIsOpen(false);
@@ -153,7 +153,7 @@ export default function UpdateModal({
         >
           Send
         </button>
-        <button className="cancel" onClick={() => setModalIsOpen(false)}>
+        <button className="rounded-button1" onClick={() => setModalIsOpen(false)}>
           Cancel
         </button>
       </Modal>
