@@ -1,0 +1,18 @@
+.footer-parent{
+    margin: 2rem auto;
+}
+.footer-parent>div{
+    display: flex;
+    background-color: white;
+    width: 79%;
+    margin: auto;
+    font-size: 1rem;
+}
+.footer-parent>div>div{
+    padding: 0.6rem;
+    border-radius: 10px;
+    margin: 0.4rem;
+    background-color: rgb(240, 246, 246);
+    font-weight: 400;
+    color: grey;
+}

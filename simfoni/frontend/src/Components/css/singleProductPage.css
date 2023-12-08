@@ -1,0 +1,26 @@
+.single-product{
+    background-color: white;
+}
+.single-product-parent{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    text-align: left;
+    
+}
+.single-product-parent>div:nth-child(2){
+    margin-left: 10rem;
+}
+.names{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.types{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.prices{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}

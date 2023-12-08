@@ -1,0 +1,32 @@
+.nav{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.nav-parent{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    margin:0.2rem auto;
+   
+    font-size: 0.85rem;
+    height: 3.0rem;
+   
+}
+.nav-parent div{
+    display: flex;
+    gap: 1rem;
+}
+.nav-parent>div:nth-child(2){
+    color: rgb(108, 196, 196);
+    font-size: 1rem;
+}
+.nav-parent>div:nth-child(2)>input{
+   border: 0.5px solid grey;
+}
+.outline{
+    font-size: 1.5rem;
+}

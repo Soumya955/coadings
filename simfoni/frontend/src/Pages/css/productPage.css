@@ -1,0 +1,48 @@
+.product-parent{
+    width:80%;
+    margin:1rem auto ;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 450px; 
+    margin-left: 11%;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    flex: 1;
+  }
+  
+  .search-button {
+    background-color: rgb(130, 228, 252);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+@media (min-width: 0px) and (max-width: 720px) {
+    .product-parent{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
