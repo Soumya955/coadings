@@ -1,0 +1,7 @@
+.products-parent{
+    display: grid;
+    width: 82%;
+    margin:4rem auto;
+    gap: 2rem;
+    grid-template-columns: repeat(3,1fr);
+}
